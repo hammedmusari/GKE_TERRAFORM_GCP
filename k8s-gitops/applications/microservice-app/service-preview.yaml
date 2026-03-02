@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+	name: service-preview
+spec:
+	type: ClusterIP
+	selector:
+		role: preview
+	ports:
+		- port: 80
+			targetPort: 8080
+			protocol: TCP
